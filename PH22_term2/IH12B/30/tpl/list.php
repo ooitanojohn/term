@@ -12,28 +12,45 @@
 <body>
     <div id="desktop1">
         <form method="post">
-            <label id="search">名前:</label>
-            <input type="search" name="name" id="search">
-            <button type="submit" name="btn" value="push">検索</button>
-        </form>
-
-        <table>
-            <tr>
-                <td><?php echo '約' . count($result) . '件'; ?></td>
-            </tr>
-            <tr>
-                <td>ID</td>
-                <td>名前</td>
-                <td>年齢</td>
-            </tr>
-            <?php foreach ($result as $key => $value) : ?>
+            <label id="SEARCH">名前:</label>
+            <input type="search" name="sch_name" id="SEARCH">
+            <button type="submit" name="btn" value="push_search">検索</button>
+            <table>
                 <tr>
-                    <td><?php echo escape($value[0]); ?></td>
-                    <td><?php echo escape($value[1]); ?></td>
-                    <td><?php echo escape($value[2]); ?></td>
+                    <th><?php echo '約' . count($result) . '件'; ?></th>
                 </tr>
-            <?php endforeach; ?>
-        </table>
+                <tr>
+                    <th>
+                        <label for="id_sel">ID</label>
+                        <select name="order" size="1" id="id_sel">
+                            <option value="id_asc">昇順</option>
+                            <option value="id_desc">降順</option>
+                        </select>
+                    </th>
+                    <th>
+                        <label for="name_sel">名前</label>
+                        <select name="order" size="1" id="name_sel">
+                            <option value="name_asc">昇順</option>
+                            <option value="name_desc" ">降順</option>
+                        </select>
+                    </th>
+                    <th>
+                        <label for=" age_sel">名前</label>
+                                <select name=" order" size="1" id="age_sel">
+                                    <option value="age_asc">昇順</option>
+                                    <option value="age_desc">降順</option>
+                                </select>
+                    </th>
+                </tr>
+                <?php foreach ($result as $key => $value) : ?>
+                    <tr>
+                        <td><?php echo escape($value[0]); ?></td>
+                        <td><?php echo escape($value[1]); ?></td>
+                        <td><?php echo escape($value[2]); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </form>
     </div>
 
 </body>
