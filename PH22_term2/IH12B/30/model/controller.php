@@ -36,7 +36,7 @@ function sql_escape($link, $obj)
 // sql文の実行
 // $phrase = insert,select句
 // 返り値 $result = sql文実行結果
-function sql_query($link, $sql, $phrase, $order)
+function sql_query($link, $sql, $phrase)
 {
     // SQL文 振り分け
     // insert文実行

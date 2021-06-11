@@ -21,7 +21,7 @@
             "cwd": "${fileDirname}",
             "port": 9000,
             "pathMappings": {
-                "C:\\xampp\\htdocs\\PHP\\PH22\\term": "${workspaceRoot}"
+                "C:\\xampp\\htdocs\\submit\\PH\\term2\\term": "${workspaceRoot}"
             },
             "runtimeExecutable": "C:\\xampp\\php\\php.exe"
         }
