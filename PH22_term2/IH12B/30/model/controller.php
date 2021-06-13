@@ -18,7 +18,7 @@ function sql_connect($config_file)
         error_log('[' . date('y-m-d:g-i-s') . ']' . 'sql_connect_err' . "\r\n", 3, 'log/error.log');
         // user側
         $err_code = '101';
-        require_once 'tpl/error.php';
+        require_once 'tpl/error.html';
         exit;
     }
     // 文字コード設定
@@ -47,7 +47,7 @@ function sql_query($link, $sql, $phrase)
             // 失敗時追加処理はここから
             error_log('[' . date('y-m-d:g-i-s') . ']' . 'sql_insert_err' . "\r\n", 3, 'log/error.log');
             $err_code = '102';
-            require_once 'tpl/error.php';
+            require_once 'tpl/error.html';
             exit;
         }
         // 成功時追加処理はここから
@@ -60,7 +60,7 @@ function sql_query($link, $sql, $phrase)
             // 失敗時追加処理はここから
             error_log('[' . date('y-m-d:g-i-s') . ']' . 'sql_select_err' . "\r\n", 3, 'log/error.log');
             $err_code = '103';
-            require_once 'tpl/error.php';
+            require_once 'tpl/error.html';
             exit;
         }
         $result = mysqli_fetch_all(mysqli_query(
