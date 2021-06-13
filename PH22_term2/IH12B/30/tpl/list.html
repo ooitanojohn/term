@@ -4,31 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <title>People</title>
 </head>
 
 <body class="text-center">
-    <!-- <div class="p-1 mb-5 bg-secondary bg-gradient text-white shadow">
-        <h1 class="display-6">please search</h1>
-        <p><img src="img/susipaku211-imgp0934_TP_V4.jpg" alt="people"></p>
-    </div> -->
-    <div>
-        <p class="p-1 mb-5 bg-secondary"><img src="img/people_logo.png" class="img-fluid " alt="ガラス玉,google風" height="10" width="auto"></p>
+    <div class="mb-2">
+        <h1 style="display:none;">ユーザー補助のリンク</h1>
+    </div>
+    <div class="row g-3 ">
+        <form method="post" class="row g-3 shadow justify-content-sm-center">
+                <div class="col-auto">
+                    <a href="list.php"><img src="img/people_logo2.png" class="img-fluid " alt="ガラス玉,google風" style="height:50px; max-width:100%;"></a>
+                </div>
+            <!-- <div class="col-auto">
+                        <label for="SEARCH">name:</label>
+                    </div> -->
+                <div class="col-sm-6 input-group mb-3 col-auto w-50">
+                    <input type="search" name="sch_name" class="form-control" placeholder="Peopleで検索または人名を入力" aria-label="Recipient's username" aria-describedby="button-addon2" id="SEARCH" autofocus>
+                    <button name="btn" value="push_search" class="btn btn-secondary" type="button" id="button-addon2">search</button>
+                </div>
+
+                <div class="row g-3 mb-4 justify-content-sm-center">
+                    <div class="col-auto">
+                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                        <label class="btn shadow" for="btn-check">ID</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                        <label class="btn shadow" for="btn-check">NAME</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+                        <label class="btn shadow" for="btn-check-2">AGE</label>
+                    </div>
+                    <select class="col-auto form-select w-25" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="ASC"></option>
+                        <option value="DESC">Two</option>
+                    </select>
+                </div>
+
+        </form>
+
     </div>
 
-    <main class="container-sm justify-content-sm-center">
-        <form method="post" class="row g-3 justify-content-center">
-            <!-- <div class="col-auto">
-                <label for="SEARCH">name:</label>
-            </div> -->
-            <div class="col-sm-6">
-                <input type="search" name="sch_name" id="SEARCH" class="form-control" placeholder="Peopleで検索または人名を入力" autofocus>
-            </div>
-            <div class="col-auto">
-                <button name="btn" value="push_search" class="btn btn-secondary mb-5">search</button>
-            </div>
-
+    <div class="container-sm justify-content-sm-center">
             <div class="alert alert-secondary lead" role="alert"><?php echo $msg; ?></div>
             <table class="table table-striped">
                 <!-- class="table table-dark table-striped" -->
@@ -48,7 +69,7 @@
                     </tr>
                 <?php endforeach; ?>
             </table>
-        </form>
+
     </main>
     <footer class="footer p-3 bg-secondary bg-gradient text-white shadow"><small>HAL_PH_term2</small></footer>
 
