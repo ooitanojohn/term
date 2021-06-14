@@ -26,6 +26,12 @@ function sql_connect($config_file)
     return $link;
 }
 
+// sql文作成
+// function sql($col, $tbl, $order)
+// {
+//     $sql =
+// }
+
 // sqlインジェクション回避
 function sql_escape($link, $obj)
 {

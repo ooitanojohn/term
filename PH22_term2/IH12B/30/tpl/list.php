@@ -28,12 +28,14 @@
 
             <div class="row g-3 mb-4 justify-content-sm-center">
                 <select name="order_col" class="col-auto form-select w-25" aria-label="Default select example">
-                    <option value="id" selected>ID</option>
+                    <option value="id">ID</option>
+                    <!-- selected -->
                     <option value="name">NAME</option>
                     <option value="age">AGE</option>
                 </select>
                 <select name="order" class="col-auto form-select w-25" aria-label="Default select example">
-                    <option value="ASC" selected>昇順</option>
+                    <option value="ASC">昇順</option>
+                    <!-- selected -->
                     <option value="DESC">降順</option>
                 </select>
             </div>

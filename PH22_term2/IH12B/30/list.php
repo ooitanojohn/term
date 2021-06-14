@@ -24,14 +24,31 @@ if (isset($_POST['sch_name'])) {
         $result = [];
         $_SESSION['msg'] = '対象がありません';
     } else {
+        // 条件 order
+        $order_col = $_POST['order_col'];
+        $order = $_POST['order'];
+
         $link = sql_connect('../../const.php');
         $sch_name = sql_escape($link, $sch_name);
         $sql = "SELECT *
         FROM sample
-        WHERE name like '%" . $sch_name . "%'";
+        WHERE name like '%" . $sch_name . "%'
+        ORDER BY " . $order_col . "\n" . $order . " ";
+        echo '$sql:';
+        var_dump($sql);
+        echo '<br>';
         $result = sql_query($link, $sql, 'select');
     }
 }
+// 並び替え
+// if (isset($_POST['order'])) {
+//     $order_col = $_POST['order_col'];
+//     $order = $_POST['order'];
+
+//     $link = sql_connect('../../const.php');
+//     $sql = "SELECT * FROM sample ORDER BY '.$order_col $order.'";
+//     $result = sql_query($link, $sql, 'select');
+// }
 // msg表示
 if (isset($_SESSION['msg'])) {
     $msg = $_SESSION['msg'];
