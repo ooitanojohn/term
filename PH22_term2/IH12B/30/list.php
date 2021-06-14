@@ -38,4 +38,4 @@ if (isset($_SESSION['msg'])) {
     session_destroy();
 }
 require_once('model/view.php');
-require_once('tpl/list.html');
+require_once('tpl/list.php');
