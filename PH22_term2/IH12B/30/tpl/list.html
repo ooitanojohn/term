@@ -22,11 +22,12 @@
                     </div> -->
                 <div class="col-sm-6 input-group mb-3 col-auto w-50">
                     <input type="search" name="sch_name" class="form-control" placeholder="Peopleで検索または人名を入力" aria-label="Recipient's username" aria-describedby="button-addon2" id="SEARCH" autofocus>
-                    <button name="btn" value="push_search" class="btn btn-secondary" type="button" id="button-addon2">search</button>
+                    <button type="submit" name="sch_name" class="btn btn-secondary"  id="button-addon2">search</button>
+
                 </div>
 
                 <div class="row g-3 mb-4 justify-content-sm-center">
-                    <div class="col-auto">
+                    <!-- <div class="col-auto">
                         <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
                         <label class="btn shadow" for="btn-check">ID</label>
                     </div>
@@ -37,11 +38,15 @@
                     <div class="col-auto">
                         <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
                         <label class="btn shadow" for="btn-check-2">AGE</label>
-                    </div>
-                    <select class="col-auto form-select w-25" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="ASC"></option>
-                        <option value="DESC">Two</option>
+                    </div> -->
+                    <select name="order_c"class="col-auto form-select w-25" aria-label="Default select example">
+                        <option value="id" selected>ID</option>
+                        <option value="name">NAME</option>
+                        <option value="age">AGE</option>
+                    </select>
+                    <select name="order" class="col-auto form-select w-25" aria-label="Default select example">
+                        <option value="ASC" selected>昇順</option>
+                        <option value="DESC">降順</option>
                     </select>
                 </div>
 
