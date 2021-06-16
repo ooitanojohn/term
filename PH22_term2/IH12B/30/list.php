@@ -5,7 +5,6 @@ require_once 'config/err_code.php';
 require_once 'model/controller.php';
 require_once 'model/initialize.php';
 
-//
 $link = sql_connect('../../const.php');
 // 受け取り処理
 if (isset($_POST['sch_name'])) {
