@@ -7,7 +7,7 @@ function sql_connect($config_file)
 
     require_once($config_file);
     $link = @mysqli_connect(
-        HOST_NAME,
+        HOST,
         ROOT,
         PASS,
         DB_NAME
