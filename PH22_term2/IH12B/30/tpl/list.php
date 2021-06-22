@@ -20,13 +20,13 @@
             <!-- <div class="col-auto">
                         <label for="SEARCH">name:</label>
                     </div> -->
-            <<<<<<< HEAD <div class="col-sm-6 input-group mb-5 col-auto w-50">
+            <div class="col-sm-6 input-group mb-5 col-auto w-50">
                 <input type="search" name="sch_name" class="form-control" placeholder="Peopleで検索または人名を入力" aria-label="Recipient's username" aria-describedby="button-addon2" autofocus>
                 <!-- id="SEARCH" -->
                 <button type="submit" value="push" class="btn btn-secondary" id="button-addon2">search</button>
-    </div>
+            </div>
 
-    <!-- <div class="row g-3 mb-4 justify-content-sm-center">
+            <!-- <div class="row g-3 mb-4 justify-content-sm-center">
                 <select name="order_c" class="col-auto form-select w-25" aria-label="Default select example">
                     <option value="id" selected>ID</option>
 =======
@@ -40,22 +40,19 @@
                 <select name="order_col" class="col-auto form-select w-25" aria-label="Default select example">
                     <option value="id">ID</option>
                     <!-- selected -->
-    >>>>>>> 04a2d8c3ae16edfa9309a3434a1feb2071eff06c
-    <option value="name">NAME</option>
-    <option value="age">AGE</option>
-    </select>
-    <select name="order" class="col-auto form-select w-25" aria-label="Default select example">
-        <<<<<<< HEAD <option value="ASC" selected>昇順</option>
-            <option value="DESC">降順</option>
-    </select>
-    </div> -->
-    =======
+            <option value="name">NAME</option>
+            <option value="age">AGE</option>
+            </select>
+            <select name="order" class="col-auto form-select w-25" aria-label="Default select example">
+                <option value="ASC" selected>昇順</option>
+                <option value="DESC">降順</option>
+            </select>
+    </div>
     <option value="ASC">昇順</option>
     <!-- selected -->
     <option value="DESC">降順</option>
     </select>
     </div>
-    >>>>>>> 04a2d8c3ae16edfa9309a3434a1feb2071eff06c
 
     </form>
 
