@@ -15,18 +15,19 @@ if (isset($_POST['sch_name'])) {
         $_SESSION['msg'] = '対象がありません';
     } else {
         // 条件 order
-        $order_col = $_POST['order_col'];
-        $order = $_POST['order'];
+        // $order_col = $_POST['order_col'];
+        // $order = $_POST['order'];
 
         $link = sql_connect('../../const.php');
         $sch_name = sql_escape($link, $sch_name);
         $sql = "SELECT *
         FROM sample
-        WHERE name like '%" . $sch_name . "%'
-        ORDER BY " . $order_col . "\n" . $order . " ";
-        echo '$sql:';
-        var_dump($sql);
-        echo '<br>';
+        WHERE name like '%" . $sch_name . "%'";
+
+        // $sql = "SELECT *
+        // FROM sample
+        // WHERE name like '%" . $sch_name . "%'
+        // ORDER BY " . $order_col . "\n" . $order . " ";
         $result = sql_query($link, $sql, 'select');
     }
 } else {

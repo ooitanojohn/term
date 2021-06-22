@@ -26,7 +26,7 @@
                 <button type="submit" value="push" class="btn btn-secondary" id="button-addon2">search</button>
             </div>
 
-            <div class="row g-3 mb-4 justify-content-sm-center">
+            <!-- <div class="row g-3 mb-4 justify-content-sm-center">
                 <select name="order_c" class="col-auto form-select w-25" aria-label="Default select example">
                     <option value="id" selected>ID</option>
                     <div class="col-sm-6 input-group mb-3 col-auto w-50">
@@ -49,7 +49,7 @@
 
                     <option value="DESC">降順</option>
                 </select>
-            </div>
+            </div> -->
 
         </form>
 

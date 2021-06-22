@@ -5,7 +5,7 @@
 function sql_connect($config_file)
 {
     require_once($config_file);
-    $link = @mysqli_connect(
+    $link = @mysqli_connect( // HOST ''の時etc.. @で処理回避
         HOST,
         ROOT,
         PASS,
