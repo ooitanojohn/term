@@ -4,7 +4,6 @@
 // config_fileに各定数HOST_NAME,ROOT,PASS,DB_NAME,CHARACTER_CODEを記述
 function sql_connect($config_file)
 {
-
     require_once($config_file);
     $link = @mysqli_connect(
         HOST,
