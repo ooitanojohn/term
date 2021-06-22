@@ -17,13 +17,11 @@ if (isset($_POST['sch_name'])) {
         // 条件 order
         // $order_col = $_POST['order_col'];
         // $order = $_POST['order'];
-
         $link = sql_connect('../../const.php');
         $sch_name = sql_escape($link, $sch_name);
         $sql = "SELECT *
         FROM sample
         WHERE name like '%" . $sch_name . "%'";
-
         // $sql = "SELECT *
         // FROM sample
         // WHERE name like '%" . $sch_name . "%'
