@@ -26,6 +26,12 @@ function sql_connect($config_file)
     return $link;
 }
 
+// sql文作成
+// function sql($col, $tbl, $order)
+// {
+//     $sql =
+// }
+
 // sqlインジェクション回避
 function sql_escape($link, $obj)
 {
@@ -69,6 +75,32 @@ function sql_query($link, $sql, $phrase)
         ));
         // 成功時追加処理はここから
         return $result;
+    }
+    // UPDATE文実行
+    elseif ($phrase === 'update') {
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            mysqli_close($link);
+            // 失敗時追加処理はここから
+            error_log('[' . date('y-m-d:g-i-s') . ']' . 'sql_update_err' . "\r\n", 3, 'log/error.log');
+            $err_code = '104';
+            require_once 'tpl/error.php';
+            exit;
+        }
+        // 成功時追加処理はここから
+    }
+    // DELETE文実行
+    elseif ($phrase === 'delete') {
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            mysqli_close($link);
+            // 失敗時追加処理はここから
+            error_log('[' . date('y-m-d:g-i-s') . ']' . 'sql_delete_err' . "\r\n", 3, 'log/error.log');
+            $err_code = '105';
+            require_once 'tpl/error.php';
+            exit;
+        }
+        // 成功時追加処理はここから
     }
     mysqli_close($link);
     // return
